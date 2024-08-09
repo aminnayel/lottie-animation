@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: transparent; /* Background color of the page */
+        }
+
+        dotlottie-player {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <dotlottie-player 
+        src="https://lottie.host/b7272551-6063-4534-b8ff-a7052c8162ba/U7e8Gt9uo2.json" 
+        background="#FFFFFF" 
+        speed="1" 
+        direction="1" 
+        playmode="normal" 
+        autoplay 
+        loop>
+    </dotlottie-player>
+
+    <!-- Importing the player component -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+</body>
+</html>
