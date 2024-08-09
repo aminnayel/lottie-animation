@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -18,23 +19,41 @@
         dotlottie-player {
             width: 300px;
             height: 300px;
+            display: none; /* Hide the player initially */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
     <dotlottie-player 
+        id="animationPlayer"
         src="https://lottie.host/b7272551-6063-4534-b8ff-a7052c8162ba/U7e8Gt9uo2.json" 
         background="transparent" 
         speed="1" 
         direction="1" 
         playmode="normal" 
-        autoplay 
-        loop = "0">
+        loop="false">
     </dotlottie-player>
+
+    <button id="playButton">Play Animation</button>
 
     <!-- Importing the player component -->
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            const player = document.getElementById('animationPlayer');
+            player.style.display = 'block'; // Show the player
+            player.play(); // Play the animation
+            this.style.display = "none"
+        });
+    </script>
 
 </body>
 </html>
