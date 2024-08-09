@@ -19,7 +19,7 @@
         dotlottie-player {
             width: 300px;
             height: 300px;
-            display: none; /* Hide the player initially */
+             /* Hide the player initially */
         }
 
         button {
@@ -38,7 +38,8 @@
         speed="1" 
         direction="1" 
         playmode="normal" 
-        loop="false">
+        loop="true"
+        autoplay="1">
     </dotlottie-player>
 
     <button id="playButton">Play Animation</button>
@@ -47,11 +48,7 @@
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     
     <script>
-        document.getElementById('playButton').addEventListener('click', function() {
-            const player = document.getElementById('animationPlayer');
-            player.style.display = 'block'; // Show the player
-            player.play(); // Play the animation
-            this.style.display = "none"
+       
         });
     </script>
 
